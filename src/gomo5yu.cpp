@@ -10,7 +10,7 @@
 #include <random>
 #include <thread>
 #include "click_label.h"
-#include "ui_gomoku.h"
+#include "ui_gomo5yu.h"
 
 static thread_local std::mt19937_64 rng_engine([]() {
   std::random_device rd;
@@ -411,7 +411,7 @@ QRectF Gomo5yu::piece_rect(const QPoint &piece_index) const {
 }
 
 void Gomo5yu::get_button_pix(const QString &button_text, QPixmap &normal,
-                            QPixmap &hover, QPixmap &press) {
+                             QPixmap &hover, QPixmap &press) {
   QFont font;
   font.setFamily("microsoft yahei");
   font.setPixelSize(qBound(
@@ -484,7 +484,8 @@ QSizeF Gomo5yu::get_size_from_board_size(const QSizeF &board_size) const {
   return size;
 }
 
-QPointF Gomo5yu::get_board_pos_from_window_pos(const QPointF &window_pos) const {
+QPointF Gomo5yu::get_board_pos_from_window_pos(
+    const QPointF &window_pos) const {
   QPointF pos = window_pos;
   pos.setY(pos.y() - get_board_y_offset());
   return pos;
@@ -510,7 +511,7 @@ QRectF Gomo5yu::bar_rect() const {
 }
 
 int Gomo5yu::checkFiveInARow(const QList<QPoint> &move_list,
-                            const QList<bool> &role_list) {
+                             const QList<bool> &role_list) {
   if (move_list.size() < 5 || move_list.size() != role_list.size()) {
     return -1;
   }
@@ -580,7 +581,7 @@ void Gomo5yu::update_button() {
 }
 
 QPixmap Gomo5yu::get_noise_pix(const QSize &size, int noise_width,
-                              int rgba_max) {
+                               int rgba_max) {
   QImage image{size, QImage::Format_ARGB32};
 
   uchar *bits = image.bits();

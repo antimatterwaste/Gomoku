@@ -6,14 +6,17 @@ CONFIG += c++11
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
+INCLUDEPATH += \
+    $$PWD/src
+
 SOURCES += \
-    click_label.cpp \
-    gomo5yu.cpp \
-    main.cpp
+    $$PWD/src/click_label.cpp \
+    $$PWD/src/gomo5yu.cpp \
+    $$PWD/src/main.cpp
 
 HEADERS += \
-    click_label.h \
-    gomo5yu.h
+    $$PWD/src/click_label.h \
+    $$PWD/src/gomo5yu.h
 
 FORMS += \
-    gomoku.ui
+    $$PWD/src/gomo5yu.ui

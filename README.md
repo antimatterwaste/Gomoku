@@ -17,6 +17,12 @@ A simple low-key-focused Gomoku (Five in a Row) game built with Qt —— perfec
 
 - ↩ 右键撤销. Click right button to undo.
 
+## 🛠️ 运行提示 | Tip
+
+`sounds`目录需要复制到程序目录下, 否则将无法播放音效.
+
+Copy the entire `sounds` folder to the application directory, otherwise sound effects will not work.
+
 ## 📸 场景截图 | Screenshots
 ![Gomoku Screenshot](screeshots/game.png)
 ![Gomoku Screenshot](screeshots/ide.png)
